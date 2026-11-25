@@ -45,7 +45,7 @@ $('#bgo').onclick=async()=>{
   if(!r.ok){$('#bm').className='msg err';$('#bm').textContent=r.j.error;return}
   localStorage.setItem('gm-code',code.toUpperCase());
   $('#mbt').textContent='تم الحجز';$('#mbf').style.display='none';
-  $('#mb .box').insertAdjacentHTML('afterbegin',`<div class="ticket" id="bt"><b class="code" style="font-size:22px">${esc(r.j.name)}</b>${r.j.date} · ${tm(r.j.time)}<br>${esc(r.j.trainer)}<br>فاضل ${ar(r.j.left)} أماكن</div>`);
+  $('#mbt').insertAdjacentHTML('afterend',`<div class="ticket" id="bt"><b class="code" style="font-size:22px">${esc(r.j.name)}</b>${r.j.date} · ${tm(r.j.time)}<br>${esc(r.j.trainer)}<br>فاضل ${ar(r.j.left)} أماكن</div>`);
   loadClasses();
 };
 document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeM()}));
