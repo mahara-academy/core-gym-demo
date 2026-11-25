@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>كور جيم | اشتراكات وحصص وحجز أونلاين</title>
+<meta name="description" content="موقع تجريبي لجيم: باقات اشتراك، جدول حصص أسبوعي وحجز أونلاين.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="/style.css"></head>
+<body>
+<div class="demo">موقع تجريبي: الأسعار والبيانات مش حقيقية</div>
+<header class="top"><div class="wrap"><a class="logo" href="/">كور<b>.</b>جيم</a>
+<nav><a href="#plans">الباقات</a><a href="#classes">الحصص</a><a href="#team">المدربين</a><a href="#me">حجوزاتي</a><a class="keep" href="#plans" style="color:var(--ac)">اشترك</a></nav></div></header>
+<div class="hero"><div class="bg" id="hbg"></div><div class="wrap">
+<h1><span class="ln">اتمرن</span><span class="ln">من <em>الأول</em></span></h1>
+<p class="ln">أجهزة حديدية، حصص جروب كل يوم ومدربين واقفين معاك. اشترك واحجز مكانك من الموبايل.</p>
+<span class="ln"><a class="btn" href="#plans">شوف الباقات</a> <a class="btn ghost" href="#classes">جدول الحصص</a></span></div></div>
+<div class="facts rv"><div><b>٦</b><span>أنواع حصص</span></div><div><b>٣</b><span>مدربين</span></div><div><b>٧ أيام</b><span>في الأسبوع</span></div><div><b>١٨ ساعة</b><span>شغالين يومياً من ٦ الصبح</span></div></div>
+
+<section id="plans"><div class="wrap"><h2 class="rv">الباقات</h2><p class="sub rv">من غير رسوم تسجيل. كل باقة فيها دخول يومي.</p><div class="plans" id="plans-l"></div></div></section>
+
+<section id="classes" style="background:var(--bg2)"><div class="wrap"><h2 class="rv">جدول الحصص</h2><p class="sub rv">اختار اليوم واحجز. العدد محدود في كل حصة.</p>
+<div class="days" id="days"></div><div class="sched" id="sched"></div></div></section>
+
+<div class="band"><div class="wrap rv"><h2>مفيش حد بيبدأ جاهز</h2><p style="color:#d8d1c6;font-size:19px;margin:0">تعال جرب أول حصة وانت تحس بالفرق.</p></div></div>
+
+<section id="team"><div class="wrap"><h2 class="rv">المدربين</h2><p class="sub rv">أسماء تجريبية.</p><div class="trainers">
+<div class="tr rv"><img src="img/t1.jpg" alt="" loading="lazy"><div><b>كابتن كريم</b><span>بوكسينج</span></div></div>
+<div class="tr rv"><img src="img/t2.jpg" alt="" loading="lazy"><div><b>كابتن سلمى</b><span>يوجا وإطالة</span></div></div>
+<div class="tr rv"><img src="img/t3.jpg" alt="" loading="lazy"><div><b>كابتن هاني</b><span>كروس فيت وقوة</span></div></div></div></div></section>
+
+<section id="me" style="background:var(--bg2)"><div class="wrap"><h2 class="rv">حجوزاتي</h2><p class="sub rv">اكتب كود العضوية (بتاخده بعد الاشتراك) تشوف عضويتك وحجوزاتك.</p>
+<div class="look"><div class="box rv"><h3>دخول بالكود</h3><input id="lk" placeholder="GM-1234" dir="ltr"><div class="msg" id="lkm"></div><button class="btn" id="lkgo">عرض</button></div>
+<div class="box rv" id="mview"><h3>عضويتك</h3><p style="color:var(--mut);margin:0">هتظهر هنا بعد ما تكتب الكود.</p></div></div></div></section>
+
+<footer><div class="wrap"><span>كور جيم، موقع تجريبي لأغراض العرض.</span><span>الصور من Pexels · <a href="/admin.html" style="text-decoration:underline">لوحة التحكم</a></span></div></footer>
+
+<div class="modal" id="mj"><div class="box"><h3 id="mjt">اشتراك</h3><div id="mjf">
+<input id="jn" placeholder="الاسم"><input id="jp" placeholder="رقم الموبايل" dir="ltr" inputmode="tel"><select id="jpl"></select><label style="color:var(--mut);font-size:14px">تاريخ البداية</label><input id="js" type="date" dir="ltr">
+<div class="msg" id="jm"></div><button class="btn" id="jgo" style="width:100%">تأكيد الاشتراك</button></div><div id="jres"></div><button class="btn ghost" style="width:100%;margin-top:10px" onclick="closeM()">إغلاق</button></div></div>
+<div class="modal" id="mb"><div class="box"><h3 id="mbt">حجز حصة</h3><div id="mbf"><input id="bc" placeholder="كود العضوية GM-1234" dir="ltr"><div class="msg" id="bm"></div><button class="btn" id="bgo" style="width:100%">احجز</button><p style="font-size:13px;color:var(--mut)">مش عضو؟ <a href="#plans" style="color:var(--ac)" onclick="closeM()">اشترك الأول</a></p></div><button class="btn ghost" style="width:100%;margin-top:10px" onclick="closeM()">إغلاق</button></div></div>
+<div class="toast" id="toast"></div>
+<script src="/app.js"></script></body></html>
